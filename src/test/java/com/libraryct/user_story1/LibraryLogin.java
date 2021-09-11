@@ -22,7 +22,7 @@ public class LibraryLogin {
         }
         Thread.sleep(3000);
         // quit driver
-        // driver.quit();
+        driver.quit();
     }
 }
 
