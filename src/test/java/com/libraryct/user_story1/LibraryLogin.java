@@ -43,8 +43,7 @@ public class LibraryLogin {
             } else {
                 System.out.println("Test failed. Actual number of modules are: " + modules.size());
             }
-
-//        Thread.sleep(2000);
+            Thread.sleep(2000);
 //        for (WebElement eachModule : modules) {
 //            System.out.println("eachModule.getText() = " + eachModule.getText());
 //        }
