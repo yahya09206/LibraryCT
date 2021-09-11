@@ -27,7 +27,13 @@ public class LibraryLogin {
             submit.click();
         }
         List<WebElement> modules = driver.findElements(By.xpath("//*[@id=\"dashboard\"]/div/div/div[1]/div"));
-
+        for (WebElement eachModule : modules) {
+            if (modules.equals(3)){
+                System.out.println("Page displays 3 modules");
+            }else {
+                System.out.println("Page does not contain 3 modules");
+            }
+        }
 
         Thread.sleep(3000);
         // quit driver
