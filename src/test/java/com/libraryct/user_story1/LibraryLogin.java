@@ -18,22 +18,25 @@ public class LibraryLogin {
 
         // verify librarian is on the login page
         if (driver.getTitle().equals("Login - Library")){
-            // set up to sign in
-            WebElement siginBox = driver.findElement(By.id("inputEmail"));
-            siginBox.sendKeys("librarian47@library");
-            WebElement passwordBox = driver.findElement(By.id("inputPassword"));
-            passwordBox.sendKeys("Sdet2022*");
-            WebElement submit = driver.findElement(By.xpath("//*[@id=\"login-form\"]/button"));
-            submit.click();
+            System.out.println("Titles match");
+        }else {
+            System.out.println("Titles do not match, expected title is Login - Library");
         }
-        List<WebElement> modules = driver.findElements(By.xpath("//*[@id=\"dashboard\"]/div/div/div[1]/div"));
-        for (WebElement eachModule : modules) {
-            if (modules.equals(3)){
+
+        // set up to sign in
+        WebElement siginBox = driver.findElement(By.id("inputEmail"));
+        siginBox.sendKeys("librarian47@library");
+        WebElement passwordBox = driver.findElement(By.id("inputPassword"));
+        passwordBox.sendKeys("Sdet2022*");
+        WebElement submit = driver.findElement(By.xpath("//*[@id=\"login-form\"]/button"));
+        submit.click();
+
+        List<WebElement> modules = driver.findElements(By.className("title"));
+            if (modules.size() == 3){
                 System.out.println("Page displays 3 modules");
             }else {
-                System.out.println("Page does not contain 3 modules");
+                System.out.println("Failed, expected result must be 3, not " + modules.size());
             }
-        }
 
         Thread.sleep(3000);
         // quit driver
