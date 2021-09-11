@@ -31,8 +31,9 @@ public class LibraryLogin {
         WebElement submit = driver.findElement(By.xpath("//*[@id=\"login-form\"]/button"));
         submit.click();
 
-        List<WebElement> modules = driver.findElements(By.className("title"));
-            if (modules.size() == 3){
+        List<WebElement> modules = driver.findElements(By.xpath("//li[@class='nav-item']"));
+        System.out.println("modules.size() = " + modules.size());
+        if (modules.size()==3){
                 System.out.println("Page displays 3 modules");
             }else {
                 System.out.println("Failed, expected result must be 3, not " + modules.size());
