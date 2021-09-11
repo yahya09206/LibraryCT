@@ -16,7 +16,7 @@ public class InvalidLogin {
         //Enter invalid credentials
         // set up to sign in
         WebElement siginBox = driver.findElement(By.id("inputEmail"));
-        siginBox.sendKeys("librarian@");
+        siginBox.sendKeys("library@library");
 
         WebElement passwordBox = driver.findElement(By.id("inputPassword"));
         passwordBox.sendKeys("Sdet2022*");
@@ -25,7 +25,7 @@ public class InvalidLogin {
         submit.click();
 
         //Checking what error message says
-        WebElement errorMessage = driver.findElement(By.id("inputEmail-Error"));
+        WebElement errorMessage = driver.findElement(By.xpath("//*[@id=\"login-form\"]/div[2]/div"));
         System.out.println("errorMessage.getText() = " + errorMessage.getText());
 
         //driver.quit();
