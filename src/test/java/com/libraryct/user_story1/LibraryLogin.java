@@ -46,12 +46,18 @@ public class LibraryLogin {
 //        for (WebElement eachModule : modules) {
 //            System.out.println("eachModule.getText() = " + eachModule.getText());
 //        }
-        // quit driver
-        //driver.quit();
 
         // select drop down
         WebElement dropDownMenu = driver.findElement(By.xpath("//*[@id=\"navbarDropdown\"]"));
         dropDownMenu.click();
+
+        //click log out
+        WebElement logoutBtn = driver.findElement(By.cssSelector("#navbarCollapse > ul.navbar-nav.navbar-right > li >" +
+                " div > a"));
+
+        Thread.sleep(2000);
+        // quit driver
+        //driver.quit();
 
 
     }
