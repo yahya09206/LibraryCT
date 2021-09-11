@@ -19,6 +19,8 @@ public class LibraryLogin {
             // set up to sign in
             WebElement siginBox = driver.findElement(By.id("inputEmail"));
             siginBox.sendKeys("librarian47@library");
+            WebElement passwordBox = driver.findElement(By.id("inputPassword"));
+            passwordBox.sendKeys("Sdet2022*");
         }
         Thread.sleep(3000);
         // quit driver
