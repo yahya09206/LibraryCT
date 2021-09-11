@@ -6,6 +6,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.util.List;
+
 public class LibraryLogin {
     public static void main(String[] args) throws InterruptedException {
 
@@ -24,6 +26,9 @@ public class LibraryLogin {
             WebElement submit = driver.findElement(By.xpath("//*[@id=\"login-form\"]/button"));
             submit.click();
         }
+        List<WebElement> modules = driver.findElements(By.xpath("//*[@id=\"dashboard\"]/div/div/div[1]/div"));
+
+
         Thread.sleep(3000);
         // quit driver
         // driver.quit();
