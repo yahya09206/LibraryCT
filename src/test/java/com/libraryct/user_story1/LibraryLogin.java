@@ -12,7 +12,7 @@ public class LibraryLogin {
         WebDriver driver = new ChromeDriver();
         driver.get("http://library2.cybertekschool.com/login.html");
 
-        // login
+        // verify librarian is on the login page
 
         Thread.sleep(3000);
         // quit driver
