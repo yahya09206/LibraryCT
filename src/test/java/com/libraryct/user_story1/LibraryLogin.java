@@ -38,7 +38,6 @@ public class LibraryLogin {
                 System.out.println("Failed, expected result must be 3, not " + modules.size());
             }
 
-        Thread.sleep(3000);
         // quit driver
         // driver.quit();
     }
