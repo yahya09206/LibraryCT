@@ -22,6 +22,7 @@ public class LibraryLogin {
             WebElement passwordBox = driver.findElement(By.id("inputPassword"));
             passwordBox.sendKeys("Sdet2022*");
             WebElement submit = driver.findElement(By.xpath("//*[@id=\"login-form\"]/button"));
+            submit.click();
         }
         Thread.sleep(3000);
         // quit driver
