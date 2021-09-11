@@ -49,6 +49,10 @@ public class LibraryLogin {
         // quit driver
         //driver.quit();
 
+        // select drop down
+        WebElement dropDownMenu = driver.findElement(By.xpath("//*[@id=\"navbarDropdown\"]"));
+        dropDownMenu.click();
+
 
     }
 }
