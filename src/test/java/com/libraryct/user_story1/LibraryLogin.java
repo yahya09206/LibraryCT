@@ -23,15 +23,14 @@ public class LibraryLogin {
             } else {
                 System.out.println("Titles do not match, expected title is Login - Library");
             }
-            Thread.sleep(2000);
 
             // set up to sign in
             WebElement siginBox = driver.findElement(By.id("inputEmail"));
             siginBox.sendKeys("librarian47@library");
-            Thread.sleep(2000);
+
             WebElement passwordBox = driver.findElement(By.id("inputPassword"));
             passwordBox.sendKeys("Sdet2022*");
-            Thread.sleep(2000);
+
             WebElement submit = driver.findElement(By.xpath("//*[@id=\"login-form\"]/button"));
             submit.click();
 
@@ -48,7 +47,9 @@ public class LibraryLogin {
 //            System.out.println("eachModule.getText() = " + eachModule.getText());
 //        }
         // quit driver
-        driver.quit();
+        //driver.quit();
+
+
     }
 }
 
