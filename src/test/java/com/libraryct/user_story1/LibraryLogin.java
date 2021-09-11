@@ -17,12 +17,6 @@ public class LibraryLogin {
         WebDriver driver = new ChromeDriver();
         driver.get("https://library2.cybertekschool.com/login.html");
 
-        ArrayList<String> libraryCredentials = new ArrayList<>();
-        libraryCredentials.add("librarian47@library");
-        libraryCredentials.add("librarian14@library");
-
-        for (String libraryCredential : libraryCredentials) {
-
             // verify librarian is on the login page
             if (driver.getTitle().equals("Login - Library")) {
                 System.out.println("Titles match");
@@ -33,7 +27,7 @@ public class LibraryLogin {
 
             // set up to sign in
             WebElement siginBox = driver.findElement(By.id("inputEmail"));
-            siginBox.sendKeys(libraryCredential);
+            siginBox.sendKeys("librarian47@library");
             Thread.sleep(2000);
             WebElement passwordBox = driver.findElement(By.id("inputPassword"));
             passwordBox.sendKeys("Sdet2022*");
@@ -54,9 +48,8 @@ public class LibraryLogin {
 //        for (WebElement eachModule : modules) {
 //            System.out.println("eachModule.getText() = " + eachModule.getText());
 //        }
-            // quit driver
-            driver.quit();
-        }
+        // quit driver
+        driver.quit();
     }
 }
 
