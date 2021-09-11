@@ -54,10 +54,11 @@ public class LibraryLogin {
         //click log out
         WebElement logoutBtn = driver.findElement(By.cssSelector("#navbarCollapse > ul.navbar-nav.navbar-right > li >" +
                 " div > a"));
+        logoutBtn.click();
 
         Thread.sleep(2000);
         // quit driver
-        //driver.quit();
+        driver.quit();
 
 
     }
