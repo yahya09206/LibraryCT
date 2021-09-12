@@ -35,21 +35,23 @@ public class AddNewUser {
         addNewUser.click();
 
         // add info for new user
-        WebElement fullName = driver.findElement(By.name("full_name"));
+        WebElement fullName = driver.findElement(By.cssSelector("#add_user_form > div.modal-body > div > div:nth-child(1) > div > div > input"));
+        Thread.sleep(2000);
         fullName.click();
+        Thread.sleep(2000);
         fullName.sendKeys("John Doe");
 
-        WebElement password = driver.findElement(By.name("password"));
-        password.click();
-        password.sendKeys("johndoe123");
-
-        WebElement email = driver.findElement(By.name("email"));
-        password.click();
-        email.sendKeys("johndoe@gmail.com");
-
-        WebElement address = driver.findElement(By.id("address"));
-        password.click();
-        address.sendKeys("1234 oak street seattle wa 98146");
+//        WebElement password = driver.findElement(By.name("password"));
+//        password.click();
+//        password.sendKeys("johndoe123");
+//
+//        WebElement email = driver.findElement(By.name("email"));
+//        password.click();
+//        email.sendKeys("johndoe@gmail.com");
+//
+//        WebElement address = driver.findElement(By.id("address"));
+//        password.click();
+//        address.sendKeys("1234 oak street seattle wa 98146");
 
         Thread.sleep(3000);
 
