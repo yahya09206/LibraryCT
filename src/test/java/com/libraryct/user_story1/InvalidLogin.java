@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class InvalidLogin {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
@@ -25,13 +25,15 @@ public class InvalidLogin {
         submit.click();
 
         //Checking what error message says
-        WebElement errorMessage = driver.findElement(By.cssSelector("#login-form > div:nth-child(2) > div"));
+        WebElement errorMessage = driver.findElement(By.className("alert-danger"));
         // Checking if correct error message is being displayed
         if (errorMessage.equals("Sorry, Wrong Email or Password")){
             System.out.println("Correct error message is printing");
         }else {
             System.out.println("Wrong error message is being displayed " + errorMessage.getText());
         }
+
+        Thread.sleep(3000);
 
         //driver.quit();
     }
