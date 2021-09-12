@@ -22,5 +22,8 @@ public class AddNewUser {
 
         WebElement submit = driver.findElement(By.xpath("//*[@id=\"login-form\"]/button"));
         submit.click();
+
+        // click on user tab
+
     }
 }
