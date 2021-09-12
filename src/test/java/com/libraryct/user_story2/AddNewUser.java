@@ -29,6 +29,12 @@ public class AddNewUser {
         userTab.click();
 
         Thread.sleep(3000);
+
+        // click add new user tab
+        WebElement addNewUser = driver.findElement(By.xpath("//*[@id=\"users\"]/div[1]/div[1]/span/a"));
+        addNewUser.click();
         //driver.quit();
+
+
     }
 }
