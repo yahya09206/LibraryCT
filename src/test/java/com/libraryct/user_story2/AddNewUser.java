@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class AddNewUser {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
@@ -23,8 +23,12 @@ public class AddNewUser {
         WebElement submit = driver.findElement(By.xpath("//*[@id=\"login-form\"]/button"));
         submit.click();
 
+        Thread.sleep(3000);
         // click on user tab
-        WebElement userTab = driver.findElement(By.linkText("Users"));
+        WebElement userTab = driver.findElement(By.xpath("//*[@id=\"menu_item\"]/li[2]/a/span[1]"));
         userTab.click();
+
+        Thread.sleep(3000);
+        //driver.quit();
     }
 }
