@@ -33,6 +33,7 @@ public class AddNewUser {
         // click add new user tab
         WebElement addNewUser = driver.findElement(By.xpath("//*[@id=\"users\"]/div[1]/div[1]/span/a"));
         addNewUser.click();
+        Thread.sleep(3000);
 
         // add info for new user
         WebElement fullName = driver.findElement(By.cssSelector("#add_user_form > div.modal-body > div > div:nth-child(1) > div > div > input"));
