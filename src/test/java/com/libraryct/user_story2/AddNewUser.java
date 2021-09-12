@@ -48,6 +48,12 @@ public class AddNewUser {
         address.sendKeys("1234 oak street seattle wa 98146");
 
         Thread.sleep(3000);
+
+        //click submit
+        WebElement saveChanges = driver.findElement(By.xpath("//*[@id=\"add_user_form\"]/div[2]/button[2]"));
+        saveChanges.click();
+
+        Thread.sleep(3000);
         //driver.quit();
 
 
