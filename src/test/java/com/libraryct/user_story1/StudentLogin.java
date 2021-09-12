@@ -35,7 +35,7 @@ public class StudentLogin {
         Thread.sleep(2000);
         List<WebElement> modules = driver.findElements(By.className("title"));
 
-        if (modules.size() == 3) {
+        if (modules.size() == 2) {
             System.out.println("Test passed, actual number of modules are matching with expected result ");
         } else {
             System.out.println("Test failed. Actual number of modules are: " + modules.size());
