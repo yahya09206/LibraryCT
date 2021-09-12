@@ -36,15 +36,19 @@ public class AddNewUser {
 
         // add info for new user
         WebElement fullName = driver.findElement(By.name("full_name"));
+        fullName.click();
         fullName.sendKeys("John Doe");
 
         WebElement password = driver.findElement(By.name("password"));
+        password.click();
         password.sendKeys("johndoe123");
 
         WebElement email = driver.findElement(By.name("email"));
+        password.click();
         email.sendKeys("johndoe@gmail.com");
 
         WebElement address = driver.findElement(By.id("address"));
+        password.click();
         address.sendKeys("1234 oak street seattle wa 98146");
 
         Thread.sleep(3000);
