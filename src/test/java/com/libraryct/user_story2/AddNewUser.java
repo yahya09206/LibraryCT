@@ -24,6 +24,7 @@ public class AddNewUser {
         submit.click();
 
         // click on user tab
-
+        WebElement userTab = driver.findElement(By.linkText("Users"));
+        userTab.click();
     }
 }
