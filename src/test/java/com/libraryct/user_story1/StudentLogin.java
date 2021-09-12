@@ -9,6 +9,13 @@ public class StudentLogin {
 
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
-        driver.get("http://library2.cybertekschool.com/login.html\n");
+        driver.get("http://library2.cybertekschool.com/login.html");
+
+        // verify librarian is on the login page
+        if (driver.getCurrentUrl().equals("http://library2.cybertekschool.com/login.html")) {
+            System.out.println("Titles match");
+        } else {
+            System.out.println("Titles do not match, expected title is Login - Library");
+        }
     }
 }
