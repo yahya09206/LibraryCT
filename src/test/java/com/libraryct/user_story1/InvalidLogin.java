@@ -23,9 +23,10 @@ public class InvalidLogin {
 
         WebElement submit = driver.findElement(By.xpath("//*[@id=\"login-form\"]/button"));
         submit.click();
-
+        
         //Checking what error message says
-        WebElement errorMessage = driver.findElement(By.className("alert-danger"));
+        WebElement errorMessage = driver.findElement(By.xpath("//*[@id=\"login-form\"]/div[2]/div"));
+        System.out.println("errorMessage.getText() = " + errorMessage.getText());
         // Checking if correct error message is being displayed
         if (errorMessage.equals("Sorry, Wrong Email or Password")){
             System.out.println("Correct error message is printing");
