@@ -36,6 +36,10 @@ public class AddNewUser {
 
         // add info for new user
         WebElement fullName = driver.findElement(By.name("full_name"));
+        fullName.sendKeys("John Doe");
+
+        WebElement password = driver.findElement(By.name("password"));
+        password.sendKeys("johndoe123");
 
         Thread.sleep(3000);
         //driver.quit();
