@@ -41,6 +41,12 @@ public class AddNewUser {
         WebElement password = driver.findElement(By.name("password"));
         password.sendKeys("johndoe123");
 
+        WebElement email = driver.findElement(By.name("email"));
+        email.sendKeys("johndoe@gmail.com");
+
+        WebElement address = driver.findElement(By.id("address"));
+        address.sendKeys("1234 oak street seattle wa 98146");
+
         Thread.sleep(3000);
         //driver.quit();
 
