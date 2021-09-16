@@ -35,5 +35,8 @@ public class AddNewBook {
         WebElement addNewBook = driver.findElement(By.xpath("//*[@id=\"books\"]/div[1]/div[1]/span/a"));
         addNewBook.click();
         Thread.sleep(3000);
+
+        // add info for new book
+        // name
     }
 }
