@@ -57,5 +57,9 @@ public class AddNewBook {
         WebElement bookAuthor = driver.findElement(By.name("author"));
         bookAuthor.click();
         bookAuthor.sendKeys("IDK");
+
+        // description
+        WebElement bookDescription = driver.findElement(By.id("description"));
+
     }
 }
