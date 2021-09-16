@@ -60,6 +60,8 @@ public class AddNewBook {
 
         // description
         WebElement bookDescription = driver.findElement(By.id("description"));
+        bookDescription.click();
+        bookDescription.sendKeys("About a boy who finds a passion for flying kites");
 
     }
 }
