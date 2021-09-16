@@ -41,5 +41,10 @@ public class AddNewBook {
         WebElement bookName = driver.findElement(By.name("name"));
         bookName.click();
         bookName.sendKeys("The Kite Runner");
+
+        // isbn
+        WebElement bookISBN = driver.findElement(By.name("isbn"));
+        bookISBN.click();
+        bookISBN.sendKeys("2344532");
     }
 }
