@@ -54,8 +54,8 @@ public class AddNewBook {
         bookYear.sendKeys("1991");
 
         // author
-        WebElement bookAuthoer = driver.findElement(By.name("author"));
-        bookAuthoer.click();
-        bookAuthoer.sendKeys("IDK");
+        WebElement bookAuthor = driver.findElement(By.name("author"));
+        bookAuthor.click();
+        bookAuthor.sendKeys("IDK");
     }
 }
