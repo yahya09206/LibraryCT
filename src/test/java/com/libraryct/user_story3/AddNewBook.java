@@ -6,6 +6,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.util.concurrent.TimeUnit;
+
 public class AddNewBook {
     public static void main(String[] args) throws InterruptedException {
 
@@ -47,16 +49,19 @@ public class AddNewBook {
         bookISBN.click();
         bookISBN.sendKeys("2344532");
 
+
         // year
         WebElement bookYear = driver.findElement(By.xpath("//*[@id=\"add_book_form\"]/div[1]/div/div[1]/div[3]/div" +
                 "/input"));
         bookYear.click();
         bookYear.sendKeys("1991");
 
+
         // author
-        WebElement bookAuthor = driver.findElement(By.name("author"));
+        WebElement bookAuthor = driver.findElement(By.xpath("//*[@id=\"add_book_form\"]/div[1]/div/div[2]/div[1]/div/input"));
         bookAuthor.click();
-        bookAuthor.sendKeys("IDK");
+        bookAuthor.sendKeys("Jane Fonda");
+
 
         // description
         WebElement bookDescription = driver.findElement(By.id("description"));
@@ -69,6 +74,5 @@ public class AddNewBook {
         driver.findElement(By.xpath("//*[@id=\"add_book_form\"]/div[2]/button[2]")).click();
 
         Thread.sleep(3000);
-
     }
 }
