@@ -63,8 +63,12 @@ public class AddNewBook {
         bookDescription.click();
         bookDescription.sendKeys("About a boy who finds a passion for flying kites");
 
+        Thread.sleep(3000);
+
         // click submit
         driver.findElement(By.xpath("//*[@id=\"add_book_form\"]/div[2]/button[2]")).click();
+
+        Thread.sleep(3000);
 
     }
 }
