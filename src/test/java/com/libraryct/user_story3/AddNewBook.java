@@ -38,5 +38,8 @@ public class AddNewBook {
 
         // add info for new book
         // name
+        WebElement bookName = driver.findElement(By.name("name"));
+        bookName.click();
+        bookName.sendKeys("The Kite Runner");
     }
 }
