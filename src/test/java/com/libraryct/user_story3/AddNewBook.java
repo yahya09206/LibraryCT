@@ -28,5 +28,12 @@ public class AddNewBook {
         // click on book tab
         WebElement userTab = driver.findElement(By.xpath("//*[@id=\"menu_item\"]/li[3]/a/span[1]"));
         userTab.click();
+
+        Thread.sleep(3000);
+
+        // click add new book tab
+        WebElement addNewBook = driver.findElement(By.xpath("//*[@id=\"books\"]/div[1]/div[1]/span/a"));
+        addNewBook.click();
+        Thread.sleep(3000);
     }
 }
