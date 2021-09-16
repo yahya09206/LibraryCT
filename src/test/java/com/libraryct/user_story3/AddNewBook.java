@@ -46,5 +46,11 @@ public class AddNewBook {
         WebElement bookISBN = driver.findElement(By.name("isbn"));
         bookISBN.click();
         bookISBN.sendKeys("2344532");
+
+        // year
+        WebElement bookYear = driver.findElement(By.xpath("//*[@id=\"add_book_form\"]/div[1]/div/div[1]/div[3]/div" +
+                "/input"));
+        bookYear.click();
+        bookYear.sendKeys("1991");
     }
 }
