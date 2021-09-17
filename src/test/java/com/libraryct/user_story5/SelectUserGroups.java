@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 import java.util.List;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class SelectUserGroups extends TestBase {
 
@@ -33,15 +34,13 @@ public class SelectUserGroups extends TestBase {
         userGroupDropDown.click();
 
         Thread.sleep(3000);
-        List<WebElement> userGroupList = driver.findElements(By.xpath("//*[@id=\"user_groups\"]"));
+        List<WebElement> userGroupList = driver.findElements(By.xpath("//*[@id=\"user_groups\"]/option"));
 //        System.out.println("userGroupList.size() = " + userGroupList.size());
 
-        Thread.sleep(3000);
-        if (userGroupList.size() == 3){
-            System.out.println("User group dropdown does contain 3 items");
-        }else {
-            System.out.println("Does not contain 3 items "  + userGroupList.size());
-        }
+       int expectedSize = 3;
+       int actualSize = userGroupList.size();
+       assertEquals(expectedSize, actualSize);
+
 
         Thread.sleep(3000);
 
