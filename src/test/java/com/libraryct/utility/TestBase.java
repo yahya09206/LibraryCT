@@ -1,4 +1,4 @@
-package com.cybertek.utility;
+package com.libraryct.utility;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -22,7 +22,7 @@ public abstract class TestBase {
 //        WebDriverManager.chromedriver().setup();
 //        driver = new ChromeDriver();
 //        driver.manage().window().maximize();
-        driver = com.cybertek.utility.WebDriverFactory.getDriver("chrome");
+        driver = com.libraryct.utility.WebDriverFactory.getDriver("chrome");
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
