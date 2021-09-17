@@ -5,6 +5,8 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
+import java.util.List;
+
 public class SelectUserGroups extends TestBase {
 
     @Test
@@ -24,6 +26,14 @@ public class SelectUserGroups extends TestBase {
         // click on user tab
         WebElement userTab = driver.findElement(By.xpath("//*[@id=\"menu_item\"]/li[2]/a/span[1]"));
         userTab.click();
+
+        // select user group drown
+        WebElement userGroupDropDown = driver.findElement(By.name("user_groups"));
+        userGroupDropDown.click();
+        List<WebElement> userGroupList = driver.findElements(By.name("user_groups"));
+        userGroupDropDown.getSize();
+
+
 
         Thread.sleep(3000);
 
