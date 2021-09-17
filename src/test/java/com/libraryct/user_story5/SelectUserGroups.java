@@ -28,9 +28,9 @@ public class SelectUserGroups extends TestBase {
         userTab.click();
 
         // select user group drown
-        WebElement userGroupDropDown = driver.findElement(By.name("user_groups"));
+        WebElement userGroupDropDown = driver.findElement(By.xpath("//*[@id=\"user_groups\"]"));
         userGroupDropDown.click();
-        List<WebElement> userGroupList = driver.findElements(By.name("user_groups"));
+        List<WebElement> userGroupList = driver.findElements(By.name("//*[@id=\"user_groups\"]"));
         userGroupDropDown.getSize();
 
 
