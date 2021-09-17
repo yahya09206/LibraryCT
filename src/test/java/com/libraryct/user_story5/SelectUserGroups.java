@@ -27,13 +27,16 @@ public class SelectUserGroups extends TestBase {
         WebElement userTab = driver.findElement(By.xpath("//*[@id=\"menu_item\"]/li[2]/a/span[1]"));
         userTab.click();
         Thread.sleep(3000);
+
         // select user group drown
         WebElement userGroupDropDown = driver.findElement(By.xpath("//*[@id=\"user_groups\"]"));
         userGroupDropDown.click();
+
         Thread.sleep(3000);
         List<WebElement> userGroupList = driver.findElements(By.xpath("//*[@id=\"user_groups\"]"));
-        System.out.println("userGroupList.size() = " + userGroupList.size());
+//        System.out.println("userGroupList.size() = " + userGroupList.size());
 
+        Thread.sleep(3000);
         if (userGroupList.size() == 3){
             System.out.println("User group dropdown does contain 3 items");
         }else {
