@@ -49,6 +49,16 @@ public class SelectUserGroups extends TestBase {
     @Test
     public void selectUserStatus(){
 
+        driver.get("http://library2.cybertekschool.com/login.html");
+        // set up to sign in
+        WebElement siginBox = driver.findElement(By.id("inputEmail"));
+        siginBox.sendKeys("librarian47@library");
+
+        WebElement passwordBox = driver.findElement(By.id("inputPassword"));
+        passwordBox.sendKeys("Sdet2022*");
+
+        WebElement submit = driver.findElement(By.xpath("//*[@id=\"login-form\"]/button"));
+        submit.click();
     }
 
 }
