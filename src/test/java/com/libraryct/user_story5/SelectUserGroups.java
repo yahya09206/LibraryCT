@@ -69,6 +69,8 @@ public class SelectUserGroups extends TestBase {
         WebElement selectUserStatus = driver.findElement(By.xpath("//*[@id=\"user_status\"]"));
         selectUserStatus.click();
 
+        // count how many list items from dropdown
+        List<WebElement> userStatusList = driver.findElements(By.xpath("//*[@id=\"user_status\"]/option"));
 
 
     }
