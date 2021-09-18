@@ -84,6 +84,8 @@ public class SelectUserGroups extends TestBase {
     @Test
     public void filterBooks(){
 
+        driver.get("http://library2.cybertekschool.com/login.html");
+
         // set up to sign in
         WebElement siginBox = driver.findElement(By.id("inputEmail"));
         siginBox.sendKeys("student34@library");
@@ -93,5 +95,9 @@ public class SelectUserGroups extends TestBase {
 
         WebElement submit = driver.findElement(By.xpath("//*[@id=\"login-form\"]/button"));
         submit.click();
+
+        // select book category drop down
+        WebElement bookCategory = driver.findElement(By.xpath("//*[@id=\"book_categories\"]"));
+        bookCategory.click();
     }
 }
