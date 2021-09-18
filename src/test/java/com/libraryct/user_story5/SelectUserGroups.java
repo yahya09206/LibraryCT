@@ -41,8 +41,7 @@ public class SelectUserGroups extends TestBase {
        int actualSize = userGroupList.size();
        assertEquals(expectedSize, actualSize);
 
-
-        Thread.sleep(3000);
+       Thread.sleep(3000);
 
     }
 
@@ -82,4 +81,17 @@ public class SelectUserGroups extends TestBase {
 
     }
 
+    @Test
+    public void filterBooks(){
+
+        // set up to sign in
+        WebElement siginBox = driver.findElement(By.id("inputEmail"));
+        siginBox.sendKeys("student34@library");
+
+        WebElement passwordBox = driver.findElement(By.id("inputPassword"));
+        passwordBox.sendKeys("Sdet2022*");
+
+        WebElement submit = driver.findElement(By.xpath("//*[@id=\"login-form\"]/button"));
+        submit.click();
+    }
 }
