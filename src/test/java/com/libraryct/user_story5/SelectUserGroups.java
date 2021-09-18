@@ -65,6 +65,11 @@ public class SelectUserGroups extends TestBase {
         userTab.click();
         Thread.sleep(3000);
 
+        // select user status drop down
+        WebElement selectUserStatus = driver.findElement(By.xpath("//*[@id=\"user_status\"]"));
+        selectUserStatus.click();
+
+
 
     }
 
