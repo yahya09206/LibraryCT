@@ -47,7 +47,7 @@ public class SelectUserGroups extends TestBase {
     }
 
     @Test
-    public void selectUserStatus(){
+    public void selectUserStatus() throws InterruptedException {
 
         driver.get("http://library2.cybertekschool.com/login.html");
         // set up to sign in
@@ -59,6 +59,13 @@ public class SelectUserGroups extends TestBase {
 
         WebElement submit = driver.findElement(By.xpath("//*[@id=\"login-form\"]/button"));
         submit.click();
+
+        // click on user tab
+        WebElement userTab = driver.findElement(By.xpath("//*[@id=\"menu_item\"]/li[2]/a/span[1]"));
+        userTab.click();
+        Thread.sleep(3000);
+
+
     }
 
 }
