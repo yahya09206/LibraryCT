@@ -46,4 +46,9 @@ public class SelectUserGroups extends TestBase {
 
     }
 
+    @Test
+    public void selectUserStatus(){
+
+    }
+
 }
