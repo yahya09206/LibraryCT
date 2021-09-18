@@ -110,5 +110,9 @@ public class SelectUserGroups extends TestBase {
 
         // select drama category
         WebElement selectDrama = driver.findElement(By.xpath("//*[@id=\"book_categories\"]/options[6]"));
+
+        String expectedGenre = "Drama";
+        String actualGenre = selectDrama.getText();
+        assertEquals(expectedGenre, actualGenre);
     }
 }
