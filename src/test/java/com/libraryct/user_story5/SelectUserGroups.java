@@ -107,5 +107,8 @@ public class SelectUserGroups extends TestBase {
         int expectedSize = 21;
         int actualSize = bookCategories.size();
         assertEquals(expectedSize, actualSize);
+
+        // select drama category
+        WebElement selectDrama = driver.findElement(By.xpath("//*[@id=\"book_categories\"]/options[6]"));
     }
 }
