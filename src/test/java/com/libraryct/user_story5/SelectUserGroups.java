@@ -78,6 +78,8 @@ public class SelectUserGroups extends TestBase {
         int actualNum = userStatusList.size();
         assertEquals(expectedNum, actualNum);
 
+        Thread.sleep(3000);
+
     }
 
 }
