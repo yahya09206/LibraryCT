@@ -71,7 +71,12 @@ public class SelectUserGroups extends TestBase {
 
         // count how many list items from dropdown
         List<WebElement> userStatusList = driver.findElements(By.xpath("//*[@id=\"user_status\"]/option"));
+        System.out.println("userStatusList.size() = " + userStatusList.size());
 
+        // check if assertion is true
+        int expectedNum = 2;
+        int actualNum = userStatusList.size();
+        assertEquals(expectedNum, actualNum);
 
     }
 
