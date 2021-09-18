@@ -109,7 +109,7 @@ public class SelectUserGroups extends TestBase {
         assertEquals(expectedSize, actualSize);
 
         // select drama category
-        WebElement selectDrama = driver.findElement(By.xpath("//*[@id=\"book_categories\"]/options[6]"));
+        WebElement selectDrama = driver.findElement(By.xpath("//*[@id=\"book_categories\"]/option[7]"));
 
         String expectedGenre = "Drama";
         String actualGenre = selectDrama.getText();
