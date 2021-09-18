@@ -82,7 +82,7 @@ public class SelectUserGroups extends TestBase {
     }
 
     @Test
-    public void filterBooks(){
+    public void filterBooks() throws InterruptedException {
 
         driver.get("http://library2.cybertekschool.com/login.html");
 
@@ -99,8 +99,13 @@ public class SelectUserGroups extends TestBase {
         // select book category drop down
         WebElement bookCategory = driver.findElement(By.xpath("//*[@id=\"book_categories\"]"));
         bookCategory.click();
+        Thread.sleep(3000);
 
         List<WebElement> bookCategories = driver.findElements(By.xpath("//*[@id=\"book_categories\"]/option"));
+        System.out.println("bookCategories.size() = " + bookCategories.size());
 
+        int expectedSize = 21;
+        int actualSize = bookCategories.size();
+        assertEquals(expectedSize, actualSize);
     }
 }
