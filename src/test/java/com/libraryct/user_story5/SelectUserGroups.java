@@ -99,5 +99,8 @@ public class SelectUserGroups extends TestBase {
         // select book category drop down
         WebElement bookCategory = driver.findElement(By.xpath("//*[@id=\"book_categories\"]"));
         bookCategory.click();
+
+        List<WebElement> bookCategories = driver.findElements(By.xpath("//*[@id=\"book_categories\"]/option"));
+
     }
 }
