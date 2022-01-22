@@ -1,6 +1,7 @@
 package com.libraryct.utility;
 
 import java.io.FileInputStream;
+import java.io.IOException;
 import java.util.Properties;
 
 /**
@@ -18,7 +19,12 @@ public class ConfigReader {
         // get the path and open the file
         try {
             FileInputStream in = new FileInputStream("config.properties");
-
+            // load the opened file in properties object
+            properties.load(in);
+            // close the file in JVM Memory
+            in.close();
+        } catch (IOException e){
+            System.out.println("Error occurred while reading config.properties " + e.getMessage());
         }
     }
 }
