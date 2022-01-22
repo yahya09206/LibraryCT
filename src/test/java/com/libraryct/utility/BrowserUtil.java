@@ -1,6 +1,7 @@
 package com.libraryct.utility;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class BrowserUtil {
@@ -25,7 +26,14 @@ public class BrowserUtil {
 
         boolean result = false;
 
-        //WebDriverWait wait = new WebDriverWait(Driver.getDriver())
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), timeToWait);
+        try {
+
+        }catch (TimeoutException e){
+
+        }
+
+        return result;
 
     }
 }
