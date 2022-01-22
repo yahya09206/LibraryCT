@@ -20,6 +20,9 @@ public class Driver {
      * Return obj with only one WebDriver instance
      * @return some WebDriver if it exists, new one if null
      */
+    public static WebDriver getDriver(){
 
+        // read the browser type you want to launch from properties file
+    }
 
 }
