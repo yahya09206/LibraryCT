@@ -12,5 +12,9 @@ public class ConfigReader {
     // Declare properties object at class level, so it can be accessible in static method
     private static Properties properties = new Properties();
 
+    // only want to load file once, so we can use static block
+    static {
+        // get the path and open the file
 
+    }
 }
