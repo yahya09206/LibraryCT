@@ -1,6 +1,7 @@
 package com.libraryct.utility;
 
 
+import com.sun.tools.internal.jxc.ConfigReader;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -26,7 +27,7 @@ public class Driver {
     public static WebDriver getDriver(){
 
         // read the browser type you want to launch from properties file
-        // String browserName = ConfigReader.read("browser");
+        String browserName = ConfigReader.read("browser");
 
         // check if object is null
         if (obj == null){
