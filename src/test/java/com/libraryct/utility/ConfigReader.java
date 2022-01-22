@@ -27,4 +27,9 @@ public class ConfigReader {
             System.out.println("Error occurred while reading config.properties " + e.getMessage());
         }
     }
+
+    // Use the object to read from the config.properties file
+    public static String read(String key){
+        return properties.getProperty(key);
+    }
 }
