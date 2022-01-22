@@ -1,5 +1,6 @@
 package com.libraryct.utility;
 
+import java.io.FileInputStream;
 import java.util.Properties;
 
 /**
@@ -15,6 +16,9 @@ public class ConfigReader {
     // only want to load file once, so we can use static block
     static {
         // get the path and open the file
+        try {
+            FileInputStream in = new FileInputStream("config.properties");
 
+        }
     }
 }
