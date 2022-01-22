@@ -23,6 +23,13 @@ public class Driver {
     public static WebDriver getDriver(){
 
         // read the browser type you want to launch from properties file
+        // String browserName = ConfigReader.read("browser");
+
+        // check if object is null
+        if (obj == null){
+            //according to browser type set up driver correctly
+
+        }
     }
 
 }
