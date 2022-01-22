@@ -40,6 +40,9 @@ public class Driver {
                     WebDriverManager.firefoxdriver().setup();
                     obj = new FirefoxDriver();
                     break;
+                default:
+                    obj = null;
+                    System.out.println("UNKNOWN BROWSER TYPE!!! " + browserName);
             }
         }
     }
