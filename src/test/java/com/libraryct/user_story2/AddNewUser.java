@@ -38,7 +38,7 @@ public class AddNewUser {
         // add info for new user
         WebElement fullName = driver.findElement(By.cssSelector("#add_user_form > div.modal-body > div > div:nth-child(1) > div > div > input"));
         fullName.click();
-        fullName.sendKeys("John Doe");
+        fullName.sendKeys("Michael Doe");
 
         WebElement password = driver.findElement(By.name("password"));
         password.click();
@@ -46,7 +46,7 @@ public class AddNewUser {
 
         WebElement email = driver.findElement(By.name("email"));
         password.click();
-        email.sendKeys("johndoe@gmail.com");
+        email.sendKeys("Michael@gmail.com");
 
         WebElement address = driver.findElement(By.id("address"));
         password.click();
