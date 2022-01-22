@@ -4,6 +4,7 @@ package com.libraryct.utility;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 /**
  * Want to have a class with that only returns Single object
@@ -35,7 +36,10 @@ public class Driver {
                     WebDriverManager.chromedriver().setup();
                     obj = new ChromeDriver();
                     break;
-
+                case "firefox":
+                    WebDriverManager.firefoxdriver().setup();
+                    obj = new FirefoxDriver();
+                    break;
             }
         }
     }
