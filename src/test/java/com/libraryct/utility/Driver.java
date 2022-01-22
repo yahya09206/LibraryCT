@@ -1,7 +1,9 @@
 package com.libraryct.utility;
 
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 /**
  * Want to have a class with that only returns Single object
@@ -28,7 +30,13 @@ public class Driver {
         // check if object is null
         if (obj == null){
             //according to browser type set up driver correctly
+            switch (browserName){
+                case "chrome":
+                    WebDriverManager.chromedriver().setup();
+                    obj = new ChromeDriver();
+                    break;
 
+            }
         }
     }
 
