@@ -1,6 +1,7 @@
 package com.libraryct.utility;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class BrowserUtil {
 
@@ -22,6 +23,9 @@ public class BrowserUtil {
      */
     public static boolean checkVisibilityOfElement(By locator, int timeToWait){
 
+        boolean result = false;
+
+        //WebDriverWait wait = new WebDriverWait(Driver.getDriver())
 
     }
 }
