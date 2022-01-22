@@ -15,4 +15,11 @@ public class Driver {
     private Driver(){
 
     }
+
+    /**
+     * Return obj with only one WebDriver instance
+     * @return some WebDriver if it exists, new one if null
+     */
+
+
 }
