@@ -60,7 +60,9 @@ public class Driver {
         // if not,
             // quit the browser
             // make it null, to avoid re-use of it
-
+        if (obj != null){
+            obj.quit();
+        }
     }
 
 }
