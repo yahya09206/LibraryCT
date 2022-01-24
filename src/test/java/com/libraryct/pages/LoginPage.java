@@ -9,13 +9,13 @@ import org.openqa.selenium.support.PageFactory;
 public class LoginPage {
 
     @FindBy(xpath = "//input[@id='inputEmail']")
-    private WebElement usernameBox;
+    private WebElement usernameField;
 
     @FindBy(xpath = "//input[@id='inputPassword']")
-    private WebElement passwordBox;
+    private WebElement passwordField;
 
     @FindBy(xpath = "//button[text()='Sign in']")
-    private WebElement submitBtn;
+    private WebElement loginBtn;
 
     // initialize driver using built in PageFactory
     public LoginPage(){
@@ -27,5 +27,15 @@ public class LoginPage {
      */
     public void goTo(){
         Driver.getDriver().get(ConfigReader.read("url"));
+    }
+
+    /**
+     * Login into website
+     */
+    public void login(String username, String password){
+
+        this.usernameField.sendKeys(username);
+        this.passwordField.sendKeys(password);
+        this.loginBtn.click();
     }
 }
