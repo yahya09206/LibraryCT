@@ -50,4 +50,12 @@ public class Driver {
         }
     }
 
+    /**
+     * Quitting the browser and setting the value of
+     * WebDriver instance to null because you can re-use already quit out of driver
+     */
+    public static void closeBrowser(){
+
+    }
+
 }
