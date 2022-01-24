@@ -1,7 +1,9 @@
 package com.libraryct.pages;
 
+import com.libraryct.utility.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage {
 
@@ -13,4 +15,13 @@ public class LoginPage {
 
     @FindBy(xpath = "//button[text()='Sign in']")
     private WebElement submitBtn;
+
+    // initialize driver using built in PageFactory
+    public LoginPage(){
+        PageFactory.initElements(Driver.getDriver(), this);
+    }
+
+    /**
+     * Navigate to login page
+     */
 }
