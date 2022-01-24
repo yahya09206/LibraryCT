@@ -5,12 +5,12 @@ import org.openqa.selenium.support.FindBy;
 
 public class LoginPage {
 
-    @FindBy(xpath = "")
+    @FindBy(xpath = "//input[@id='inputEmail']")
     private WebElement usernameBox;
 
-    @FindBy(xpath = "")
+    @FindBy(xpath = "//input[@id='inputPassword']")
     private WebElement passwordBox;
 
-    @FindBy(xpath = "")
+    @FindBy(xpath = "//button[text()='Sign in']")
     private WebElement submitBtn;
 }
