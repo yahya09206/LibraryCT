@@ -62,6 +62,7 @@ public class Driver {
             // make it null, to avoid re-use of it
         if (obj != null){
             obj.quit();
+            obj = null;
         }
     }
 
