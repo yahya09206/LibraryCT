@@ -56,6 +56,11 @@ public class Driver {
      */
     public static void closeBrowser(){
 
+        // check if obj is null or not
+        // if not,
+            // quit the browser
+            // make it null, to avoid re-use of it
+
     }
 
 }
