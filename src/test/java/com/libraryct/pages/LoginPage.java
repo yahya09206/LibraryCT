@@ -1,5 +1,6 @@
 package com.libraryct.pages;
 
+import com.libraryct.utility.ConfigReader;
 import com.libraryct.utility.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -24,4 +25,7 @@ public class LoginPage {
     /**
      * Navigate to login page
      */
+    public void goTo(){
+        Driver.getDriver().get(ConfigReader.read("url"));
+    }
 }
