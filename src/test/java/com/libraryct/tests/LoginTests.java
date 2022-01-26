@@ -17,6 +17,7 @@ public class LoginTests extends TestBase {
         loginPage.goTo();
         loginPage.login(ConfigReader.read("username"), ConfigReader.read("password"));
         BrowserUtil.waitFor(4);
+        assertEquals();
     }
 
     @Test
