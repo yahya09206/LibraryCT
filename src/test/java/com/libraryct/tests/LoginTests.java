@@ -21,7 +21,7 @@ public class LoginTests extends TestBase {
     public void loginAsAdminTest(){
 
         loginPage.goTo();
-        loginPage.login();
+        loginPage.login(ConfigReader.read("username2"), ConfigReader.read("password"));
 
     }
 }
