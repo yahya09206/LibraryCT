@@ -41,4 +41,8 @@ public class LoginPage {
         this.passwordField.sendKeys(password);
         this.loginBtn.click();
     }
+
+    public boolean errorMessage(){
+        return this.errorMsg.isDisplayed();
+    }
 }

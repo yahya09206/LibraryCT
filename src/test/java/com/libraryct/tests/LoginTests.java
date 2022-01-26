@@ -32,6 +32,6 @@ public class LoginTests extends TestBase {
 
         loginPage.goTo();
         loginPage.login("blah@library", "Sdet2022*");
-        assertTrue()
+        assertTrue(loginPage.errorMessage().isDisplayed);
     }
 }
