@@ -7,6 +7,8 @@ import com.libraryct.utility.TestBase;
 import jdk.nashorn.internal.runtime.regexp.joni.Config;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.*;
+
 public class LoginTests extends TestBase {
     LoginPage loginPage = new LoginPage();
     @Test
@@ -28,6 +30,8 @@ public class LoginTests extends TestBase {
     @Test
     public void loginNegativeTest(){
 
-        loginPage.
+        loginPage.goTo();
+        loginPage.login("blah@library", "Sdet2022*");
+        assertTrue()
     }
 }
