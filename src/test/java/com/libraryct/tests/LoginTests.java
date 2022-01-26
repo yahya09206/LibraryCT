@@ -18,8 +18,10 @@ public class LoginTests extends TestBase {
     }
 
     @Test
-    public void loginAsStudentTesT(){
+    public void loginAsAdminTest(){
 
+        loginPage.goTo();
+        loginPage.login();
 
     }
 }
