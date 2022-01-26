@@ -6,6 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 public class LoginPage {
 
     @FindBy(xpath = "//input[@id='inputEmail']")
@@ -19,6 +21,9 @@ public class LoginPage {
 
     @FindBy(xpath = "//div/div[text()='Sorry, Wrong Email or Password']")
     private WebElement errorMsg;
+
+    @FindBy(className = "card")
+    private List<WebElement> modules;
 
     // initialize driver using built in PageFactory
     public LoginPage(){
@@ -44,5 +49,9 @@ public class LoginPage {
 
     public boolean errorMessage(){
         return this.errorMsg.isDisplayed();
+    }
+
+    public int moduleSize(){
+        return modules.size();
     }
 }

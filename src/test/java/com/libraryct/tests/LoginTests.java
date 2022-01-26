@@ -25,6 +25,11 @@ public class LoginTests extends TestBase {
         loginPage.goTo();
         loginPage.login(ConfigReader.read("username2"), ConfigReader.read("password"));
         BrowserUtil.waitFor(4);
+        if (loginPage.moduleSize() == 3){
+            System.out.println("loginPage.moduleSize() = " + loginPage.moduleSize());
+        }else {
+            System.out.println("Module size is not the same" + loginPage.moduleSize());
+        }
     }
 
     @Test
