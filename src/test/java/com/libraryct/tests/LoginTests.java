@@ -24,4 +24,9 @@ public class LoginTests extends TestBase {
         loginPage.login(ConfigReader.read("username2"), ConfigReader.read("password"));
         BrowserUtil.waitFor(4);
     }
+
+    @Test
+    public void loginNegativeTest(){
+
+    }
 }
