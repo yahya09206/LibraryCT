@@ -28,5 +28,6 @@ public class LoginTests extends TestBase {
     @Test
     public void loginNegativeTest(){
 
+        loginPage.
     }
 }
