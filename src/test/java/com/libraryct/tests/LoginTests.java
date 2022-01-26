@@ -8,11 +8,10 @@ import jdk.nashorn.internal.runtime.regexp.joni.Config;
 import org.junit.jupiter.api.Test;
 
 public class LoginTests extends TestBase {
-
+    LoginPage loginPage = new LoginPage();
     @Test
     public void loginToPageTest(){
 
-        LoginPage loginPage = new LoginPage();
         loginPage.goTo();
         loginPage.login(ConfigReader.read("username"), ConfigReader.read("password"));
         BrowserUtil.waitFor(4);
@@ -20,6 +19,7 @@ public class LoginTests extends TestBase {
 
     @Test
     public void loginAsStudentTesT(){
+
 
     }
 }
