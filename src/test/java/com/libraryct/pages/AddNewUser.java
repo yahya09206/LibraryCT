@@ -10,7 +10,14 @@ public class AddNewUser {
     @FindBy(xpath = "//li/a/span[text()='Users']")
     private WebElement usersTab;
 
+
+
     public AddNewUser(){
         PageFactory.initElements(Driver.getDriver(), this);
+    }
+
+    public void userTab(){
+
+        this.usersTab.click();
     }
 }
