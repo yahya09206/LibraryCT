@@ -6,4 +6,8 @@ public class AddNewUser {
 
     // get locators for adding user form
     @FindBy(xpath = "")
+
+    public AddNewUser(){
+
+    }
 }
