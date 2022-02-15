@@ -11,6 +11,7 @@ public class AddNewUser {
     @Test
     public void addUserTest(){
 
+        // login
         LoginPage loginPage = new LoginPage();
     }
 }
