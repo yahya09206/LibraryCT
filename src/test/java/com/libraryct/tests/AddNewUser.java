@@ -13,5 +13,6 @@ public class AddNewUser {
 
         // login
         LoginPage loginPage = new LoginPage();
+        loginPage.goTo();
     }
 }
