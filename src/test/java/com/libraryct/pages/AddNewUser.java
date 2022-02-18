@@ -17,7 +17,7 @@ public class AddNewUser {
     }
 
     public void userTab(){
-
+        //CLICK USER TAB
         this.usersTab.click();
     }
 }
